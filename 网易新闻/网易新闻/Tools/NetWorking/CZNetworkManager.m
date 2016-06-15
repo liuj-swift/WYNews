@@ -10,4 +10,19 @@
 
 @implementation CZNetworkManager
 
++ (instancetype)sharedManager {
+    
+    static CZNetworkManager *instance;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        //末尾要有反斜线
+        NSURL *baseURL = [NSURL URLWithString:@"http://c.m.163.com/nc/article/"];
+        
+        instance = [[self alloc] initWithBaseURL:baseURL];
+    });
+    return instance;
+}
+
 @end
