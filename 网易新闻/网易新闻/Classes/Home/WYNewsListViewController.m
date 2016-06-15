@@ -8,7 +8,11 @@
 
 #import "WYNewsListViewController.h"
 
-@interface WYNewsListViewController ()
+static NSString *cellId = @"cellId";
+
+@interface WYNewsListViewController () <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,weak) UITableView *tableView;
 
 @end
 
@@ -16,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +29,43 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 20;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //取cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    //设置cell
+    cell.textLabel.text = @(indexPath.row).description;
+    //返回cell
+    return cell;
+}
+
+#pragma mark - 设置界面
+- (void)setupUI {
+ 
+    UITableView *tv = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    
+    [self.view addSubview:tv];
+    
+    //自动布局
+    [tv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    //注册原型cell
+    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
+    
+    //设置数据源,代理
+    tv.dataSource = self;
+    tv.delegate = self;
+    
+    //记录成员变量
+    _tableView = tv;
+}
+
 
 @end
