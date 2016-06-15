@@ -10,4 +10,9 @@
 
 @implementation WYHomeViewController
 
+- (void)viewDidLoad {
+
+    self.view.backgroundColor = [UIColor cz_randomColor];
+}
+
 @end
