@@ -10,6 +10,4 @@
 
 @interface CZNetworkManager : AFHTTPSessionManager
 
-+ (instancetype)sharedManager;
-
 @end
