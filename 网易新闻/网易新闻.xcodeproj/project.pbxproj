@@ -11,6 +11,7 @@
 		4302AE431D112A98005B1D4A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4302AE421D112A98005B1D4A /* AppDelegate.m */; };
 		4302AE4B1D112A98005B1D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4302AE4A1D112A98005B1D4A /* Assets.xcassets */; };
 		4302AE4E1D112A98005B1D4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4302AE4C1D112A98005B1D4A /* LaunchScreen.storyboard */; };
+		43629B3B1D119B87002C73B6 /* WYNewsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 43629B3A1D119B87002C73B6 /* WYNewsListItem.m */; };
 		43A4772A1D112E9E00BCCBB6 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A477131D112E9E00BCCBB6 /* NSArray+Log.m */; };
 		43A4772B1D112E9E00BCCBB6 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A477151D112E9E00BCCBB6 /* NSAttributedString+CZAdditon.m */; };
 		43A4772C1D112E9E00BCCBB6 /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A477171D112E9E00BCCBB6 /* NSObject+CZRuntime.m */; };
@@ -39,6 +40,8 @@
 		4302AE4A1D112A98005B1D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4302AE4D1D112A98005B1D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4302AE4F1D112A98005B1D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43629B391D119B87002C73B6 /* WYNewsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListItem.h; sourceTree = "<group>"; };
+		43629B3A1D119B87002C73B6 /* WYNewsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListItem.m; sourceTree = "<group>"; };
 		43A477111D112E9E00BCCBB6 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
 		43A477121D112E9E00BCCBB6 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		43A477131D112E9E00BCCBB6 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -69,8 +72,8 @@
 		43A4773C1D112F3100BCCBB6 /* WYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMainViewController.h; sourceTree = "<group>"; };
 		43A4773D1D112F3100BCCBB6 /* WYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMainViewController.m; sourceTree = "<group>"; };
 		43A4773F1D11346E00BCCBB6 /* WYPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPrefix.pch; sourceTree = "<group>"; };
-		43A477401D114A8300BCCBB6 /* WYNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListViewController.h; sourceTree = "<group>"; };
-		43A477411D114A8300BCCBB6 /* WYNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListViewController.m; sourceTree = "<group>"; };
+		43A477401D114A8300BCCBB6 /* WYNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYNewsListViewController.h; path = ../WYNewsListViewController.h; sourceTree = "<group>"; };
+		43A477411D114A8300BCCBB6 /* WYNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYNewsListViewController.m; path = ../WYNewsListViewController.m; sourceTree = "<group>"; };
 		43EE6D231D116CDB009678D4 /* CZNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZNetworkManager.h; sourceTree = "<group>"; };
 		43EE6D241D116CDB009678D4 /* CZNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZNetworkManager.m; sourceTree = "<group>"; };
 		ABD902B631C8C7D8F297D072 /* Pods-网易新闻.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-网易新闻.debug.xcconfig"; path = "Pods/Target Support Files/Pods-网易新闻/Pods-网易新闻.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +134,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43629B371D119B5D002C73B6 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				43629B381D119B5D002C73B6 /* Model */,
+				43A477401D114A8300BCCBB6 /* WYNewsListViewController.h */,
+				43A477411D114A8300BCCBB6 /* WYNewsListViewController.m */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		43629B381D119B5D002C73B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43629B391D119B87002C73B6 /* WYNewsListItem.h */,
+				43629B3A1D119B87002C73B6 /* WYNewsListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		43A4770F1D112E9E00BCCBB6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,10 +206,9 @@
 		43A477371D112EAB00BCCBB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				43629B371D119B5D002C73B6 /* NewsList */,
 				43A477391D112F0400BCCBB6 /* WYHomeViewController.h */,
 				43A4773A1D112F0400BCCBB6 /* WYHomeViewController.m */,
-				43A477401D114A8300BCCBB6 /* WYNewsListViewController.h */,
-				43A477411D114A8300BCCBB6 /* WYNewsListViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,6 +377,7 @@
 				43A4773E1D112F3100BCCBB6 /* WYMainViewController.m in Sources */,
 				43A477301D112E9E00BCCBB6 /* UIButton+CZAddition.m in Sources */,
 				43A477341D112E9E00BCCBB6 /* UIView+CZAddition.m in Sources */,
+				43629B3B1D119B87002C73B6 /* WYNewsListItem.m in Sources */,
 				43A4772E1D112E9E00BCCBB6 /* NSString+CZHash.m in Sources */,
 				43A477321D112E9E00BCCBB6 /* UILabel+CZAddition.m in Sources */,
 				43A477421D114A8300BCCBB6 /* WYNewsListViewController.m in Sources */,

@@ -7,12 +7,18 @@
 //
 
 #import "WYNewsListViewController.h"
+#import "WYNewsListItem.h"
 
 static NSString *cellId = @"cellId";
 
 @interface WYNewsListViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,weak) UITableView *tableView;
+
+/**
+ *  新闻列表数组
+ */
+@property (nonatomic,strong) NSMutableArray <WYNewsListItem *> *newsList;
 
 @end
 
@@ -34,13 +40,23 @@ static NSString *cellId = @"cellId";
 - (void)loadData {
     
     [[CZNetworkManager sharedManager]newsListWithChannel:@"T1348649079062" start:0 completion:^(NSArray *array, NSError *error) {
+        //字典的数组 - 字典转模型
         NSLog(@"%@",array);
+        
+        //字典转模型
+        NSArray *list = [NSArray yy_modelArrayWithClass:[WYNewsListItem class] json:array];
+        
+        //设置给 新闻数组
+        self.newsList = [NSMutableArray arrayWithArray:list];
+        
+        //刷新表格
+        [self.tableView reloadData];
     }];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _newsList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -48,7 +64,7 @@ static NSString *cellId = @"cellId";
     //取cell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     //设置cell
-    cell.textLabel.text = @(indexPath.row).description;
+    cell.textLabel.text = _newsList[indexPath.row].title;
     //返回cell
     return cell;
 }
