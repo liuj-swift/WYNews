@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,15 +18,10 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vJS-pR-Dwn">
                         <rect key="frame" x="14" y="8" width="102" height="76"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="102" id="Ywd-XR-cTe"/>
+                            <constraint firstAttribute="height" constant="76" id="4lc-0Y-NgZ"/>
+                            <constraint firstAttribute="width" constant="102" id="D8E-i0-Q3w"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-qO-c7y">
-                        <rect key="frame" x="129" y="8" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x2-Zs-GKZ">
                         <rect key="frame" x="129" y="72" width="26.5" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -33,23 +29,29 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P91-lk-IBb">
-                        <rect key="frame" x="243.5" y="72" width="26.5" height="12"/>
+                        <rect key="frame" x="283.5" y="72" width="26.5" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pg-qO-c7y">
+                        <rect key="frame" x="129" y="8" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4x2-Zs-GKZ" firstAttribute="bottom" secondItem="vJS-pR-Dwn" secondAttribute="bottom" id="1kg-p2-m82"/>
-                    <constraint firstAttribute="bottom" secondItem="vJS-pR-Dwn" secondAttribute="bottom" constant="8.5" id="2rc-Xe-hk3"/>
-                    <constraint firstItem="4pg-qO-c7y" firstAttribute="leading" secondItem="vJS-pR-Dwn" secondAttribute="trailing" constant="13" id="Bdw-CC-PpW"/>
-                    <constraint firstItem="4pg-qO-c7y" firstAttribute="top" secondItem="vJS-pR-Dwn" secondAttribute="top" id="QtT-Ce-v2g"/>
-                    <constraint firstAttribute="trailing" secondItem="P91-lk-IBb" secondAttribute="trailing" constant="50" id="U0g-Kb-Xs5"/>
-                    <constraint firstAttribute="bottom" secondItem="P91-lk-IBb" secondAttribute="bottom" constant="8.5" id="d0b-Z4-6ka"/>
-                    <constraint firstItem="4x2-Zs-GKZ" firstAttribute="leading" secondItem="4pg-qO-c7y" secondAttribute="leading" id="eUI-d4-vzz"/>
-                    <constraint firstItem="vJS-pR-Dwn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="oqe-wo-tcj"/>
-                    <constraint firstItem="vJS-pR-Dwn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pNm-mr-d3L"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4pg-qO-c7y" secondAttribute="trailing" constant="50" id="qyi-T4-BIh"/>
+                    <constraint firstItem="4x2-Zs-GKZ" firstAttribute="bottom" secondItem="vJS-pR-Dwn" secondAttribute="bottom" id="154-a4-iM2"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4x2-Zs-GKZ" secondAttribute="bottom" constant="0.5" id="B6U-2M-1Oc"/>
+                    <constraint firstItem="4pg-qO-c7y" firstAttribute="leading" secondItem="vJS-pR-Dwn" secondAttribute="trailing" constant="13" id="IHQ-cd-Ffd"/>
+                    <constraint firstItem="4x2-Zs-GKZ" firstAttribute="leading" secondItem="vJS-pR-Dwn" secondAttribute="trailing" constant="13" id="P1a-H1-Pxz"/>
+                    <constraint firstItem="vJS-pR-Dwn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="R4h-xG-8Wf"/>
+                    <constraint firstAttribute="bottom" secondItem="P91-lk-IBb" secondAttribute="bottom" constant="8.5" id="R6V-hu-34N"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4pg-qO-c7y" secondAttribute="trailing" constant="10" id="VNC-5A-RsQ"/>
+                    <constraint firstItem="4pg-qO-c7y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Vt7-6x-vti"/>
+                    <constraint firstItem="vJS-pR-Dwn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="an9-19-nJC"/>
+                    <constraint firstAttribute="trailing" secondItem="P91-lk-IBb" secondAttribute="trailing" constant="10" id="xtf-hU-xKi"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
