@@ -15,12 +15,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-Me-8u0">
-                        <rect key="frame" x="10" y="15" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-UN-hBh">
                         <rect key="frame" x="10" y="44" width="111.5" height="87"/>
                         <constraints>
@@ -45,11 +39,18 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-Me-8u0">
+                        <rect key="frame" x="10" y="15" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="7Sp-6r-dLr" firstAttribute="height" secondItem="Ovz-9l-30l" secondAttribute="height" id="48K-p0-I6O"/>
                     <constraint firstItem="Ovz-9l-30l" firstAttribute="height" secondItem="Cfe-UN-hBh" secondAttribute="height" id="9US-GC-lTw"/>
                     <constraint firstAttribute="bottomMargin" secondItem="vLu-5J-PO7" secondAttribute="bottom" constant="8" id="9qr-1z-1sm"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="LJh-Me-8u0" secondAttribute="trailing" constant="10" id="CrN-FH-5CF"/>
                     <constraint firstItem="7Sp-6r-dLr" firstAttribute="leading" secondItem="Ovz-9l-30l" secondAttribute="trailing" constant="10" id="FgS-hl-NTF"/>
                     <constraint firstItem="Ovz-9l-30l" firstAttribute="leading" secondItem="Cfe-UN-hBh" secondAttribute="trailing" constant="10" id="HjO-K4-yEn"/>
                     <constraint firstItem="LJh-Me-8u0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="W0W-Ml-W33"/>
@@ -67,6 +68,14 @@
                     <constraint firstItem="Cfe-UN-hBh" firstAttribute="top" secondItem="LJh-Me-8u0" secondAttribute="bottom" constant="8" id="xN9-W8-KBs"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="Cfe-UN-hBh" id="Kh9-oA-zHF"/>
+                <outlet property="replyLabel" destination="vLu-5J-PO7" id="TgI-Qd-hDo"/>
+                <outlet property="sourceLabel" destination="BS9-X5-0iM" id="ab9-4b-JLJ"/>
+                <outlet property="titleLabel" destination="LJh-Me-8u0" id="TAr-nA-teu"/>
+                <outletCollection property="extraIcon" destination="Ovz-9l-30l" id="DZJ-0G-VKC"/>
+                <outletCollection property="extraIcon" destination="7Sp-6r-dLr" id="Bmc-ZT-huf"/>
+            </connections>
             <point key="canvasLocation" x="350.5" y="153.5"/>
         </tableViewCell>
     </objects>

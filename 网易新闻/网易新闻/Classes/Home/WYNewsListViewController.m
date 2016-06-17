@@ -9,6 +9,7 @@
 #import "WYNewsListViewController.h"
 #import "WYNewsListItem.h"
 #import "WYNewsNormalCell.h"
+#import "WYNewsExtraImagesCell.h"
 #import <UIImageView+WebCache.h>
 
 static NSString *cellId = @"cellId";
@@ -64,7 +65,7 @@ static NSString *cellId = @"cellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //取cell
-    WYNewsNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    WYNewsExtraImagesCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     //设置cell
     // cell.textLabel.text = _newsList[indexPath.row].title;
@@ -79,6 +80,19 @@ static NSString *cellId = @"cellId";
     //设置图片
     NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
     [cell.iconView sd_setImageWithURL:imageURL];
+    
+    //设置多图 - 如果没有不会进入循环
+    NSInteger idx = 0;
+    for (NSDictionary *dict in model.imgextra) {
+        
+        //1.获取url字符串
+        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
+        
+        //2.设置图像
+        UIImageView *iv = cell.extraIcon[idx++];
+        
+        [iv sd_setImageWithURL:url];
+    }
     
     //返回cell
     return cell;
@@ -98,7 +112,8 @@ static NSString *cellId = @"cellId";
     
     //注册原型cell
     // [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
-    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:cellId];
+    // [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:cellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraImagesCell" bundle:nil] forCellReuseIdentifier:cellId];
     
     //设置自动行高
     tv.estimatedRowHeight = 100;
