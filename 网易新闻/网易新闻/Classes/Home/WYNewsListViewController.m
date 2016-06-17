@@ -14,6 +14,7 @@
 
 static NSString *normalCellId = @"normalCellId";
 static NSString *extraCellId = @"extraCellId";
+static NSString *bigImageCellId = @"bigImageCellId";
 
 @interface WYNewsListViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -73,8 +74,9 @@ static NSString *extraCellId = @"extraCellId";
     WYNewsListItem *model = _newsList[indexPath.row];
     
     NSString *cellId;
-    
-    if (model.imgextra.count > 0) {
+    if (model.imgType) {
+        cellId = bigImageCellId;
+    }else if (model.imgextra.count > 0) {
         cellId = extraCellId;
     }else {
         cellId = normalCellId;
@@ -124,6 +126,7 @@ static NSString *extraCellId = @"extraCellId";
     // [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
      [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:normalCellId];
     [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraImagesCell" bundle:nil] forCellReuseIdentifier:extraCellId];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsBigImageCell" bundle:nil] forCellReuseIdentifier:bigImageCellId];
     
     //设置自动行高
     tv.estimatedRowHeight = 100;
