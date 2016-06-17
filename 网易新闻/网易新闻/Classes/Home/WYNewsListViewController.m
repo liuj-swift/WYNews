@@ -43,7 +43,8 @@ static NSString *extraCellId = @"extraCellId";
 #pragma mark - 加载数据
 - (void)loadData {
     
-    [[CZNetworkManager sharedManager]newsListWithChannel:@"T1348649079062" start:0 completion:^(NSArray *array, NSError *error) {
+    // c.3g.163.com/nc/article/list/c/0-20.html
+    [[CZNetworkManager sharedManager]newsListWithChannel:@"T1348648517839" start:0 completion:^(NSArray *array, NSError *error) {
         //字典的数组 - 字典转模型
         NSLog(@"%@",array);
         
