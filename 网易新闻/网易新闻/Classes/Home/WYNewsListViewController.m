@@ -87,27 +87,8 @@ static NSString *headerCellId = @"headerCellId";
     
     WYNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    //2.设置数据
-    cell.titleLabel.text = model.title;
-    cell.sourceLabel.text = model.source;
-    cell.replyLabel.text = @(model.replyCount).description;
-    
-    //设置图片
-    NSURL *imageURL = [NSURL URLWithString:model.imgsrc];
-    [cell.iconView sd_setImageWithURL:imageURL];
-    
-    //设置多图 - 如果没有不会进入循环
-    NSInteger idx = 0;
-    for (NSDictionary *dict in model.imgextra) {
-        
-        //1.获取url字符串
-        NSURL *url = [NSURL URLWithString:dict[@"imgsrc"]];
-        
-        //2.设置图像
-        UIImageView *iv = cell.extraIcon[idx++];
-        
-        [iv sd_setImageWithURL:url];
-    }
+    cell.newsItem = model;
+
     
     //返回cell
     return cell;
