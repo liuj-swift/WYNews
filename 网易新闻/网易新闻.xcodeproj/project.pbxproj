@@ -16,6 +16,8 @@
 		430BCC151D1E8347007DE430 /* UIImageView+CZ_WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BCC141D1E8347007DE430 /* UIImageView+CZ_WebImage.m */; };
 		430BCC1B1D1E8964007DE430 /* WYChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BCC1A1D1E8964007DE430 /* WYChannelView.m */; };
 		430BCC1D1D1E898D007DE430 /* WYChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 430BCC1C1D1E898D007DE430 /* WYChannelView.xib */; };
+		430BCC201D1E94F4007DE430 /* WYChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 430BCC1F1D1E94F4007DE430 /* WYChannel.m */; };
+		430BCC221D1E954B007DE430 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 430BCC211D1E954B007DE430 /* topic_news.json */; };
 		43629B3B1D119B87002C73B6 /* WYNewsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 43629B3A1D119B87002C73B6 /* WYNewsListItem.m */; };
 		436F8BC21D13807C00324ADE /* WYNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 436F8BC11D13807C00324ADE /* WYNewsCell.m */; };
 		436F8BC61D13AB2800324ADE /* WYNewsBigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 436F8BC51D13AB2800324ADE /* WYNewsBigImageCell.xib */; };
@@ -55,6 +57,9 @@
 		430BCC191D1E8964007DE430 /* WYChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannelView.h; sourceTree = "<group>"; };
 		430BCC1A1D1E8964007DE430 /* WYChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannelView.m; sourceTree = "<group>"; };
 		430BCC1C1D1E898D007DE430 /* WYChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYChannelView.xib; sourceTree = "<group>"; };
+		430BCC1E1D1E94F4007DE430 /* WYChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannel.h; sourceTree = "<group>"; };
+		430BCC1F1D1E94F4007DE430 /* WYChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannel.m; sourceTree = "<group>"; };
+		430BCC211D1E954B007DE430 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 		43629B391D119B87002C73B6 /* WYNewsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListItem.h; sourceTree = "<group>"; };
 		43629B3A1D119B87002C73B6 /* WYNewsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListItem.m; sourceTree = "<group>"; };
 		436F8BC01D13807C00324ADE /* WYNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsCell.h; sourceTree = "<group>"; };
@@ -197,6 +202,9 @@
 		430BCC161D1E88E9007DE430 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				430BCC211D1E954B007DE430 /* topic_news.json */,
+				430BCC1E1D1E94F4007DE430 /* WYChannel.h */,
+				430BCC1F1D1E94F4007DE430 /* WYChannel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 			files = (
 				43097EBE1D12299F009DA892 /* WYNewsNormalCell.xib in Resources */,
 				436F8BC61D13AB2800324ADE /* WYNewsBigImageCell.xib in Resources */,
+				430BCC221D1E954B007DE430 /* topic_news.json in Resources */,
 				4383A7CE1D12420000967B88 /* WYNewsExtraImagesCell.xib in Resources */,
 				4302AE4E1D112A98005B1D4A /* LaunchScreen.storyboard in Resources */,
 				430BCC1D1D1E898D007DE430 /* WYChannelView.xib in Resources */,
@@ -479,6 +488,7 @@
 				43A477341D112E9E00BCCBB6 /* UIView+CZAddition.m in Sources */,
 				43629B3B1D119B87002C73B6 /* WYNewsListItem.m in Sources */,
 				43A4772E1D112E9E00BCCBB6 /* NSString+CZHash.m in Sources */,
+				430BCC201D1E94F4007DE430 /* WYChannel.m in Sources */,
 				43A477321D112E9E00BCCBB6 /* UILabel+CZAddition.m in Sources */,
 				43A477421D114A8300BCCBB6 /* WYNewsListViewController.m in Sources */,
 				43EE6D251D116CDB009678D4 /* CZNetworkManager.m in Sources */,
