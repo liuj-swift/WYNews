@@ -18,4 +18,9 @@
  */
 @property (nonatomic,copy) NSString *tid;
 
+/**
+ *  返回频道数组模型
+ */
++ (NSArray *)channelList;
+
 @end

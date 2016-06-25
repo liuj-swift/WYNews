@@ -8,12 +8,19 @@
 
 #import "WYHomeViewController.h"
 #import "WYChannelView.h"
+#import "WYChannel.h"
 
-@implementation WYHomeViewController
+@implementation WYHomeViewController {
+    NSArray <WYChannel *> *_channelList;
+}
 
 - (void)viewDidLoad {
 
     [self setupUI];
+    //测试频道数据
+    _channelList = [WYChannel channelList];
+    
+    NSLog(@"%@",_channelList);
 }
 
 #pragma mark - 设置界面
