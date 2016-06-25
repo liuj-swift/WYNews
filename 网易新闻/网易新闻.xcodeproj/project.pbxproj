@@ -143,6 +143,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		430855AF1D1CE9AE00A644B1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		430855B01D1CE9BE00A644B1 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		430855B11D1CE9BE00A644B1 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		430855B21D1CE9BE00A644B1 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		43097EB91D12296B009DA892 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +249,10 @@
 			children = (
 				43A477381D112EAB00BCCBB6 /* Main */,
 				43A477371D112EAB00BCCBB6 /* Home */,
+				430855B01D1CE9BE00A644B1 /* Me */,
+				430855B11D1CE9BE00A644B1 /* Read */,
+				430855B21D1CE9BE00A644B1 /* Video */,
+				430855AF1D1CE9AE00A644B1 /* Chat */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
