@@ -49,6 +49,9 @@
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(38);
     }];
+    
+    //记录成员变量
+    _channelView = cv;
 }
 
 @end
