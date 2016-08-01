@@ -28,6 +28,16 @@ static NSString *headerCellId = @"headerCellId";
 
 @implementation WYNewsListViewController
 
+- (instancetype)initWithChannelId:(NSString *)channelId index:(NSInteger)index {
+    
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        _channelId= channelId;
+        _channelIndex = index;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -44,7 +54,7 @@ static NSString *headerCellId = @"headerCellId";
 - (void)loadData {
     
     // c.3g.163.com/nc/article/list/c/0-20.html
-    [[CZNetworkManager sharedManager]newsListWithChannel:@"T1348647853363" start:0 completion:^(NSArray *array, NSError *error) {
+    [[CZNetworkManager sharedManager]newsListWithChannel:_channelId start:0 completion:^(NSArray *array, NSError *error) {
         //字典的数组 - 字典转模型
         NSLog(@"%@",array);
         
