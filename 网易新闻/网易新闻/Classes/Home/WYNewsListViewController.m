@@ -104,6 +104,9 @@ static NSString *headerCellId = @"headerCellId";
         make.edges.equalTo(self.view);
     }];
     
+    // 设置表格的 contentInset - 既能保证穿透效果, 又能保证末尾 cell 显示完整
+    tv.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
+    
     //注册原型cell
     // [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
      [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:normalCellId];
