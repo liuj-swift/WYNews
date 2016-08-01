@@ -22,7 +22,9 @@
     UINib *nib = [UINib nibWithNibName:@"WYChannelView" bundle:nil];
     
     return [nib instantiateWithOwner:nil options:nil].lastObject;
+    
 }
+
 
 /**
  *  设置数据
@@ -50,6 +52,7 @@
         [_scrollView addSubview:l]; 
     }
     
+    
     //设置 scrollView 的contentSize
     _scrollView.contentSize = CGSizeMake(x, height);
     
@@ -58,5 +61,6 @@
     _scrollView.showsHorizontalScrollIndicator = NO;
     
 }
+
 
 @end
