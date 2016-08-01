@@ -40,12 +40,47 @@
 }
 
 #pragma mark - UIPageViewControllerDelegate
-//- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-//
-//}
-//- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-//
-//}
+// 返回前一个控制器
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(WYNewsListViewController *)viewController {
+
+    //1. 取当前控制器的频道索引
+    NSInteger idx = viewController.channelIndex;
+    
+    //2. 递减 idx
+    idx--;
+    
+    //3. 判断 idx
+    if (idx < 0) {
+        NSLog(@"没有前一个");
+        return nil;
+    }
+    
+    //4. 创建新的控制器并且返回
+    WYNewsListViewController *vc = [[WYNewsListViewController alloc] initWithChannelId:_channelList[idx].tid index:idx];
+    
+    return vc;
+}
+
+//返回后一个控制器
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(WYNewsListViewController *)viewController {
+
+    //1. 取当前控制器的频道索引
+    NSInteger idx = viewController.channelIndex;
+    
+    //2. 递增 idx
+    idx++;
+    
+    //3. 判断 idx
+    if (idx >= _channelList.count) {
+        NSLog(@"没有后一个");
+        return nil;
+    }
+    
+    //4. 创建新的控制器并且返回
+    WYNewsListViewController *vc = [[WYNewsListViewController alloc] initWithChannelId:_channelList[idx].tid index:idx];
+    
+    return vc;
+}
 
 #pragma mark - 设置界面
 - (void)setupUI {
@@ -80,7 +115,7 @@
     UIPageViewController *pc = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     //2. 设置分页控制器的'子控制器 (新闻列表控制器)'
-    WYNewsListViewController *vc = [[WYNewsListViewController alloc] initWithChannelId:_channelList[0].tid index:0];
+    WYNewsListViewController *vc = [[WYNewsListViewController alloc] initWithChannelId:_channelList[4].tid index:0];
     
     [pc setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     

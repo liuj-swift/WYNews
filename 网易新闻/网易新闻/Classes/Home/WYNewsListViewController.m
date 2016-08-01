@@ -56,7 +56,7 @@ static NSString *headerCellId = @"headerCellId";
     // c.3g.163.com/nc/article/list/c/0-20.html
     [[CZNetworkManager sharedManager]newsListWithChannel:_channelId start:0 completion:^(NSArray *array, NSError *error) {
         //字典的数组 - 字典转模型
-        NSLog(@"%@",array);
+        //NSLog(@"%@",array);
         
         //字典转模型
         NSArray *list = [NSArray yy_modelArrayWithClass:[WYNewsListItem class] json:array];
